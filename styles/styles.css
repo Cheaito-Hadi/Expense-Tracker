@@ -1,37 +1,84 @@
 body{
-    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: antiquewhite;
 }
 
 .container{
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh
+    height: 80vh;
 }
 
 .expense-wrapper{
     display: flex;
     align-items: center;
     flex-direction: column;
-    max-width: 300px;
     gap: 10px;
+    border-style: dotted;
+    padding: 10px;
+    border-color: brown;
+    background-color:beige;
 }
 
 input{
     width: 400px;
     padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
-button{
+#btn{
     width: 200px;
     background-color: chartreuse;
     padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
 }
 
 li:hover span {
     display: inline;
     cursor: pointer;
   }
+
+h1,h3{
+    color: brown;
+    margin: 10px;
+}  
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#expense-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+#total-expense{
+    padding: 10px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    border-style:solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+
+.remove{
+    background-color: red;
+    padding: 3px;
+    color: aliceblue;
+    border-radius: 5px;
+}
