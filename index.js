@@ -1,6 +1,8 @@
 const expenseInput = $("#expense-text");
 const amountInput = $("#expense-amount");
 const expenseList = $("#expense-list");
+let total = $("#total-expense");
+let expenseTotal = 0;
 
 function createExpense(text, amount) {
     return `<li>
@@ -19,10 +21,15 @@ function createExpense(text, amount) {
     
   
     const expense = $(createExpense(expenseInput.val(),amountInput.val()))
-
+    expense.find(".remove").click(function () {
+      expense.remove()
+    })
+    
     expenseList.append(expense)
+    expenseTotal += parseFloat(amountInput.val());
     expenseInput.val("")
     amountInput.val("")
+    total.text(`Total ${expenseTotal}`)
   }
 
   $(document).ready(function () {

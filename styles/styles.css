@@ -30,3 +30,8 @@ button{
     background-color: chartreuse;
     padding: 10px;
 }
+
+li:hover span {
+    display: inline;
+    cursor: pointer;
+  }
